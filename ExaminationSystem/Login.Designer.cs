@@ -36,50 +36,52 @@
             this.radioInstructor = new System.Windows.Forms.RadioButton();
             this.radioStudent = new System.Windows.Forms.RadioButton();
             this.lblFailed = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUserNameFrm1
             // 
-            this.txtUserNameFrm1.Location = new System.Drawing.Point(311, 105);
-            this.txtUserNameFrm1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUserNameFrm1.Location = new System.Drawing.Point(288, 128);
             this.txtUserNameFrm1.Name = "txtUserNameFrm1";
-            this.txtUserNameFrm1.Size = new System.Drawing.Size(163, 27);
+            this.txtUserNameFrm1.Size = new System.Drawing.Size(231, 23);
             this.txtUserNameFrm1.TabIndex = 0;
             // 
             // txtIDFrm1
             // 
-            this.txtIDFrm1.Location = new System.Drawing.Point(311, 163);
-            this.txtIDFrm1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDFrm1.Location = new System.Drawing.Point(288, 171);
             this.txtIDFrm1.Name = "txtIDFrm1";
-            this.txtIDFrm1.Size = new System.Drawing.Size(163, 27);
+            this.txtIDFrm1.Size = new System.Drawing.Size(231, 23);
             this.txtIDFrm1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(182, 109);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(228, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(52, 21);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Enter Your Name";
+            this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(182, 167);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(228, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 20);
+            this.label2.Size = new System.Drawing.Size(25, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Enter Your ID";
+            this.label2.Text = "ID";
             // 
             // btnLogin
             // 
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.Location = new System.Drawing.Point(339, 345);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.Location = new System.Drawing.Point(228, 310);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(86, 31);
+            this.btnLogin.Size = new System.Drawing.Size(90, 40);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -88,10 +90,9 @@
             // radioInstructor
             // 
             this.radioInstructor.AutoSize = true;
-            this.radioInstructor.Location = new System.Drawing.Point(250, 248);
-            this.radioInstructor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioInstructor.Location = new System.Drawing.Point(288, 235);
             this.radioInstructor.Name = "radioInstructor";
-            this.radioInstructor.Size = new System.Drawing.Size(112, 24);
+            this.radioInstructor.Size = new System.Drawing.Size(92, 19);
             this.radioInstructor.TabIndex = 7;
             this.radioInstructor.TabStop = true;
             this.radioInstructor.Text = "As Instructor";
@@ -100,30 +101,53 @@
             // radioStudent
             // 
             this.radioStudent.AutoSize = true;
-            this.radioStudent.Location = new System.Drawing.Point(421, 248);
-            this.radioStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioStudent.Location = new System.Drawing.Point(437, 235);
             this.radioStudent.Name = "radioStudent";
-            this.radioStudent.Size = new System.Drawing.Size(97, 24);
+            this.radioStudent.Size = new System.Drawing.Size(82, 19);
             this.radioStudent.TabIndex = 8;
             this.radioStudent.TabStop = true;
-            this.radioStudent.Text = "AsStudent";
+            this.radioStudent.Text = "As Student";
             this.radioStudent.UseVisualStyleBackColor = true;
             // 
             // lblFailed
             // 
             this.lblFailed.AutoSize = true;
             this.lblFailed.ForeColor = System.Drawing.Color.Red;
-            this.lblFailed.Location = new System.Drawing.Point(285, 444);
+            this.lblFailed.Location = new System.Drawing.Point(332, 395);
             this.lblFailed.Name = "lblFailed";
-            this.lblFailed.Size = new System.Drawing.Size(203, 20);
+            this.lblFailed.Size = new System.Drawing.Size(160, 15);
             this.lblFailed.TabIndex = 9;
             this.lblFailed.Text = "Login failed ,please try again.";
             // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Location = new System.Drawing.Point(504, 310);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(90, 40);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(318, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 41);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "LOGIN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblFailed);
             this.Controls.Add(this.radioStudent);
             this.Controls.Add(this.radioInstructor);
@@ -132,11 +156,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIDFrm1);
             this.Controls.Add(this.txtUserNameFrm1);
-            this.Location = new System.Drawing.Point(50, 50);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Location = new System.Drawing.Point(100, 50);
             this.Name = "Login";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,10 +170,12 @@
         private Label label1;
         private Label label2;
         private Button btnLogin;
-        private RadioButton radioInstructor;
-        private RadioButton radioStudent;
-        private Label lblFailed;
         public TextBox txtUserNameFrm1;
         public TextBox txtIDFrm1;
+        public RadioButton radioInstructor;
+        public RadioButton radioStudent;
+        public Label lblFailed;
+        private Button btnExit;
+        private Label label3;
     }
 }

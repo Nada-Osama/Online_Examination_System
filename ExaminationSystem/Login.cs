@@ -1,55 +1,49 @@
 using ExaminationSystem.Context2;
+using Microsoft.Data.SqlClient;
 
 namespace ExaminationSystem
 {
     public partial class Login : Form
     {
+        public int id;
+        public string name;
+        public Online_Examination_SystemContext context = new();
+        public static SqlConnection conn = new SqlConnection();
+
         public Login()
         {
             InitializeComponent();
-            
+            conn.ConnectionString = "Data Source=.;Initial Catalog=Online_Examination_System; " +
+                               "Integrated Security = true ; TrustServerCertificate=true";
+            btnExit.Click += (sender, e) => Application.Exit();
         }
-
-
-        Online_Examination_SystemContext context=new();
-        public string name;
-        public int id;
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
             InstructorHome Instructorhome = new InstructorHome();
             StudentHome StudentHome = new StudentHome();
-             name = txtUserNameFrm1.Text;
-             id = int.Parse(txtIDFrm1.Text);
+            name = txtUserNameFrm1.Text;
+            id = int.Parse(txtIDFrm1.Text);
             if (radioInstructor.Checked)
             {
-            
-                
-            var instructiorName=(from  I in context.Instructors
-                             select I.InsName).ToList();
-            var instructorID= (from I in context.Instructors
-                               select I.InsId).ToList();
-            for(int i=0;i<instructiorName.Count;i++)
-            {
-                if (instructiorName[i] == name && instructorID[i] == id)
+                var instructiorName=(from  I in context.Instructors
+                                 select I.InsName).ToList();
+                var instructorID= (from I in context.Instructors
+                                   select I.InsId).ToList();
+                for(int i=0;i<instructiorName.Count;i++)
                 {
-                      this.Hide();
-                      Instructorhome.ShowDialog();
-                     // Instructorhome.labelInsId.Text =id.ToString();
-                      //Instructorhome.labelInsName.Text = name;
-                       // this.Invalidate();
+                    if (instructiorName[i].ToLower() == name.ToLower() && instructorID[i] == id)
+                    {
+                        this.Hide();
+                        Instructorhome.Location = this.Location;
+                        Instructorhome.ShowDialog();
                         break;
-
-                }
+                    }
                     else
                     {
                         lblFailed.Visible = true;
-
-                        break;
                     }
-            }
-                
-
+                }
             }
             if(radioStudent.Checked)
             {
@@ -59,26 +53,25 @@ namespace ExaminationSystem
                                     select I.StId).ToList();
                 for (int i = 0; i < studentName.Count; i++)
                 {
-                    if (studentName[i] == name && studentID[i] == id)
+                    if (studentName[i].ToLower() == name.ToLower() && studentID[i] == id)
                     {
                         this.Hide();
+                        StudentHome.Location = this.Location;
                         StudentHome.ShowDialog();
                         break;
                     }
                     else
                     {
                         lblFailed.Visible = true;
-                        break;
                     }
                 }
             }
-              
-
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
             lblFailed.Visible = false;
         }
+
     }
 }
